@@ -3,6 +3,7 @@ import 'package:tokokita/bloc/login_bloc.dart';
 import 'package:tokokita/helpers/user_info.dart';
 import 'package:tokokita/ui/produk_page.dart';
 import 'package:tokokita/ui/registrasi_page.dart';
+import 'package:tokokita/widget/success_dialog.dart';
 import 'package:tokokita/widget/warning_dialog.dart';
 
 class LoginPage extends StatefulWidget {
@@ -99,9 +100,19 @@ class _LoginPageState extends State<LoginPage> {
         if (value.code == 200) {
           await UserInfo().setToken(value.token.toString());
           await UserInfo().setUserID(int.parse(value.userID.toString()));
-          Navigator.pushReplacement(
-            context,
-            MaterialPageRoute(builder: (context) => const ProdukPage()),
+          showDialog(
+            context: context,
+            barrierDismissible: false,
+            builder: (BuildContext context) => SuccessDialog(
+              description: "Login berhasil, selamat datang!",
+              okClick: () {
+                Navigator.pop(context);
+                Navigator.of(context).pushAndRemoveUntil(
+                  MaterialPageRoute(builder: (_) => const ProdukPage()),
+                  (route) => false,
+                );
+              },
+            ),
           );
         } else {
           showDialog(
@@ -124,9 +135,6 @@ class _LoginPageState extends State<LoginPage> {
         );
       },
     );
-    setState(() {
-      _isLoading = false;
-    });
   }
 
   Widget _menuRegistrasi() {
