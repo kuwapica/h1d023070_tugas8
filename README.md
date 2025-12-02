@@ -1,8 +1,7 @@
-# PERTEMUAN 10 - TUGAS 8
+# PERTEMUAN 11 - TUGAS 9
 Nama : Annida Aiska Humairoh <br>
 NIM : H1D023070 <br>
-SHIFT : D (baru), I (awal)
-<br>
+SHIFT : D (baru), I (awal)<br><br>
 link drive untuk screenshot aplikasi: https://drive.google.com/drive/folders/1DinsnfgciFmXqanzT8IYiuD23UiR8HLD?usp=sharing 
 <br><br>
 
