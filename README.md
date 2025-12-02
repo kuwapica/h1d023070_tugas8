@@ -106,7 +106,7 @@ CRUD dilakukan melalui komunikasi HTTP antara Flutter dan CodeIgniter 4. Semua r
 <img width="378" height="504" alt="Screenshot 2025-12-02 220518" src="https://github.com/user-attachments/assets/2038645c-e6c6-4e84-a16d-e3330deb4a62" />
 <br><br>
 
-- 📃Read (Menampilkan List Produk)<br>
+- 📃**Read (Menampilkan List Produk)**<br>
   Bloc yang dipanggil yaitu `ProdukBloc.getProduks()` :
   ```
   static Future<List<Produk>> getProduks() async {
@@ -129,7 +129,7 @@ CRUD dilakukan melalui komunikasi HTTP antara Flutter dan CodeIgniter 4. Semua r
   Di UI, diberikan FutureBuilder untuk menunggu respons dari server<br>
   😁 Saat token valid -> data ditampilkan<br>
   😿 Jika token invalid -> API akan menolak
-- ➕Create (Tambah Produk) <br>
+- ➕**Create** (Tambah Produk) <br>
   Saat user submit form `ProdukBloc.addProduk(produk: createProduk)`, data dikirim dengan POST::
   ```
   var body = {
@@ -145,7 +145,7 @@ CRUD dilakukan melalui komunikasi HTTP antara Flutter dan CodeIgniter 4. Semua r
   ```
   😁 Jika berhasil -> kembali ke List Produk <br>
   😿 Jika gagal -> tampil WarningDialog
-- 📝 Update (Mengubah Produk)<br>
+- 📝 **Update** (Mengubah Produk)<br>
   Saat membuka form dari detail produk -> field otomatis terisi. cek kondisi `if(widget.produk != null)` untuk edit.<br>
   Memanggil `ProdukBloc.updateProduk(produk: updateProduk)` untuk edit produk:
   ```
@@ -166,7 +166,7 @@ CRUD dilakukan melalui komunikasi HTTP antara Flutter dan CodeIgniter 4. Semua r
   ```
   Request PUT ke endpoint: `var response = await Api().put(apiUrl, jsonEncode(body));`. <br>
   😸 Jika sukses maka akan redirect kembali ke List Produk.
-- 🚮 Delete (Hapus Produk)<br>
+- 🚮 **Delete** (Hapus Produk)<br>
   Dari halaman `produk_detail.dart` klik tombol Delete, akan tampil konfirmasi, hapus jika "Ya"
   ```
   ProdukBloc.deleteProduk(id: int.parse(widget.produk!.id!))
