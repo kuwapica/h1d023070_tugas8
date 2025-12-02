@@ -106,7 +106,7 @@ CRUD dilakukan melalui komunikasi HTTP antara Flutter dan CodeIgniter 4. Semua r
 <img width="378" height="504" alt="Screenshot 2025-12-02 220518" src="https://github.com/user-attachments/assets/2038645c-e6c6-4e84-a16d-e3330deb4a62" />
 <br><br>
 
-- 📃Read (Menampilkan List Produk)
+- 📃Read (Menampilkan List Produk)<br>
   Bloc yang dipanggil yaitu `ProdukBloc.getProduks()` :
   ```
   static Future<List<Produk>> getProduks() async {
