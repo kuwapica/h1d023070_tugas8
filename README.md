@@ -145,7 +145,7 @@ CRUD dilakukan melalui komunikasi HTTP antara Flutter dan CodeIgniter 4. Semua r
   ```
   😁 Jika berhasil -> kembali ke List Produk <br>
   😿 Jika gagal -> tampil WarningDialog
-- 📝 Update (Mengubah Produk)
+- 📝 Update (Mengubah Produk)<br>
   Saat membuka form dari detail produk -> field otomatis terisi. cek kondisi `if(widget.produk != null)` untuk edit.<br>
   Memanggil `ProdukBloc.updateProduk(produk: updateProduk)` untuk edit produk:
   ```
@@ -166,7 +166,7 @@ CRUD dilakukan melalui komunikasi HTTP antara Flutter dan CodeIgniter 4. Semua r
   ```
   Request PUT ke endpoint: `var response = await Api().put(apiUrl, jsonEncode(body));`. <br>
   😸 Jika sukses maka akan redirect kembali ke List Produk.
-- 🚮 Delete (Hapus Produk)
+- 🚮 Delete (Hapus Produk)<br>
   Dari halaman `produk_detail.dart` klik tombol Delete, akan tampil konfirmasi, hapus jika "Ya"
   ```
   ProdukBloc.deleteProduk(id: int.parse(widget.produk!.id!))
