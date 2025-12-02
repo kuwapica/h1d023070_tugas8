@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tokokita/bloc/produk_bloc.dart';
 import 'package:tokokita/model/produk.dart';
 import 'package:tokokita/ui/produk_form.dart';
 import 'package:tokokita/ui/produk_page.dart';
@@ -96,18 +97,8 @@ class _ProdukDetailState extends State<ProdukDetail> {
         ),
       ],
     );
-    showDialog(builder: (context) => alertDialog, context: context);
-  }
-}
 
-class ProdukBloc {
-  static Future<bool> deleteProduk({required int id}) async {
-    try {
-      await Future.delayed(const Duration(milliseconds: 500));
-      return true;
-    } catch (e) {
-      return Future.error(e);
-    }
+    showDialog(builder: (context) => alertDialog, context: context);
   }
 }
 
